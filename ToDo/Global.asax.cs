@@ -16,6 +16,10 @@ namespace ToDo
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            //===========================================================
+            // Set the Database Initializer
+            //===========================================================
+            Database.SetInitializer<MyDbContext>(new MyDbInitializer());
         }
     }
 }
